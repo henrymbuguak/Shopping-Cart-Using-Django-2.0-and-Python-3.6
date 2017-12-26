@@ -1,4 +1,4 @@
-# Welcome to Help App Platform
+# Welcome to Online Shopping Cart
 ---------------------------------------
 
 This is a guide on how to set up the project on your localhost for development.
@@ -6,13 +6,12 @@ This is a guide on how to set up the project on your localhost for development.
 
 ## Introduction
 
-Help App Platform is running on Django Web framework and Python programming language.
+Online Shopping Cart is running on Django Web framework and Python programming language.
 
 ###### Specific Technologies
 
-1. Django Web Framework(Django version 1.11.6)
-2. Django Rest Framework(version 3.7.1)
-3. Python 3.6.3
+1. Django Web Framework(Django version 2.0)
+2. Python 3.6.3
 
 ###### Environment Setup
 
@@ -32,13 +31,11 @@ The above command will activate your virtual environment. That's it!
 While the virtual environment is still active, time to clone the help project. Run the 
 following command:
 
-- git clone https://henrymbuguak@bitbucket.org/muva/help_web.git
+- git clone https://github.com/henrymbuguak/Shopping-Cart-Using-Django-2.0-and-Python-3.6.git
 
 
-**Remember the above command will depend on your bitbucket login username**
-
-After cloning the project, a folder with name help_web will be created. Type the following 
-command: **cd help_web** to navigate into the project folder.You need to install project dependencies. Run the following command:
+After cloning the project, a folder with name shopping_cart will be created. Type the following 
+command: **cd shopping_cart** to navigate into the project folder.You need to install project dependencies. Run the following command:
 
 - pip install -r requirements.txt
 
@@ -52,41 +49,12 @@ This can be done in the settings.py file.
 After sorting your database settings. You need to run migrations, to do this, run the following 
 command:
 
-- python manage.py makemigrations help
+- python manage.py makemigrations 
 
 The above command will create migrations but tables are not created yet. To actually create 
 tables in the database, run the following command:
 
 - python manage.py migrate
-
-
-
-###### Creating Thumbnails
-
-The last thing you need to do is to install ffmpeg for dealing with videos thumbnails.
-To install this on linux run the following command:
-
-- sudo apt-get install ffmpeg
-
-To install this on MacOs run the following command:
-
-- brew install ffmpeg
-
-
-###### Loading Countries Into The Database
-
-Help mobile application needs countries to operate smoothly. To do this, we are using 
-what we call **Fixture** in Django. To load countries into the database, run the 
-following command:
-
-- python manage.py loaddata countries.json
-
-
-###### Online Server Setup
-
-To understand how the online server([helplifes.com](http://helplifes.com/)) is setup. You have to read through this tutorial
-[How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04)
-
 
 
 ###### Important Commands
