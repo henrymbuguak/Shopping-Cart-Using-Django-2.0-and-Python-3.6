@@ -11,9 +11,21 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h3 class="blog-post-title">
+            <h3 class="blog-post-title" style="font-size: 20px">
                 {% if category %}
                     {{ category.name }} {% else %} Products
+                      <span class="badge pull-right">
+                          {% with totail_items=cart|length %}
+                              {% if cart|length > 0 %}
+                                  My Shopping Order:
+                                  <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
+                                      {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                                  </a>
+                              {% else %}
+                                  Your cart is empty.
+                              {% endif %}
+                          {% endwith %}
+                      </span>
                 {% endif %}
             </h3>
           
